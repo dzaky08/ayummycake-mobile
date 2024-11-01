@@ -31,10 +31,21 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: EVColor.primary,
       body: Center(
-        child: Image.asset(
-          "assets/images/logoayummy1.png",
-          height: 300,
-          width: 300,
+        child: Card(
+          elevation: 8, // Menentukan tinggi shadow
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(100), // Sudut melengkung
+          ),
+          child: ClipRRect(
+            borderRadius:
+                BorderRadius.circular(100), // Menghindari gambar terlihat kotak
+            child: Image.asset(
+              'assets/images/logo1.jpg', // Ganti dengan path gambar assetmu
+              width: 250,
+              height: 250,
+              fit: BoxFit.cover, // Mengatur gambar agar menutupi seluruh Card
+            ),
+          ),
         ),
       ),
     );

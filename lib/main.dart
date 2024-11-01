@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowMaterialGrid: false,
+      debugShowCheckedModeBanner: false,
       title: 'AyummyCakeShop',
       theme: ThemeData(
           scaffoldBackgroundColor: EVColor.neutral10, fontFamily: 'Poppins'),
@@ -25,6 +25,5 @@ class MyApp extends StatelessWidget {
         },
       ),
     );
-    ;
   }
 }
